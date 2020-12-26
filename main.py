@@ -8,9 +8,11 @@ print(pages)
 
 speaker = pyttsx3.init()
 
-for r in range(0, pages):
+for num in range(0, pages):
     page = pdfReader.getPage(4)
     text = page.extractText()
     speaker.say(text)
     speaker.runAndWait()
+    
+book.close()    
     
